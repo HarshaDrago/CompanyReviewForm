@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME PAGE</title>
+	<style>
+		body {background-color: powderblue;}
+		h1   {color: black;}
+		p    {color: red;}
+	</style>
+</head>
+<body>
+	<h1>CUSTOMER REVIEW FORM</h1>
+	<form name = "home" action="CompanyReview" method="post">
+		<label><b>Reviewer Name: </b><br>
+		<input type="text" name="name" required><br></label>
+		<br>
+
+		<label>
+			<b>Which Product did you buy?</b>
+			<select name = "product">
+				<option value="None">Select...</option>
+				<option value="Mobile, Computers">Mobile, Computers</option>
+				<option value="Books">Books</option>
+				<option value="TV, Appliances, Electronics">TV, Appliances, Electronics</option>
+				<option value="Men's Fashion">Men's Fashion</option>
+				<option value="Women's Fashion">Women's Fashion</option>
+				<option value="Home, Kitchen, Pets">Home, Kitchen, Pets</option>
+				<option value="Beauty, Health, Grocery">Beauty, Health, Grocery</option>
+				<option value="Sports">Sports</option>
+				<option value="Kids">Kids</option>
+				<option value="Automobiles">Automobiles</option>
+				
+			</select>
+		</label>
+<br><br>
+		<b>Rate: </b><br>
+		<label>
+			<input type="radio" name="rating" value = "1">1 
+		</label>
+		<label>
+			<input type="radio" name="rating" value = "2">2
+		</label>
+		<label>
+			<input type="radio" name="rating" value = "3">3
+		</label>
+		<label>
+			<input type="radio" name="rating" value = "4">4
+		</label>
+		<label>
+			<input type="radio" name="rating" value = "5">5
+		</label> <br>
+		<br>
+
+		<label>
+		<b>Title: </b><br>
+		<input type="text" name="title"></label>
+		<br>
+		<br>
+
+		<label>
+			<b>Pros: </b><br>
+			<textarea rows="4" cols="50" name="pros"></textarea>
+		</label>
+		<br>
+		<br>
+
+		<label>
+			<b>Cons: </b><br>
+			<textarea rows="4" cols="50" name="cons"></textarea>
+		</label>
+		<br>
+		<br>
+
+		<label>
+			<b>Review: </b><br>
+			<textarea rows="9" cols="50" name="review" required></textarea>
+		</label>
+		<br>
+		<br>
+
+		<b>Would you recommend this product?</b><br>
+		<input type="radio" name="recommend" value = "Yes">Yes<br>
+		<input type="radio" name="recommend" value="No">No <br>
+		<input type="radio" name="recommend" value="Not Sure">I am not sure<br>
+		<br>
+
+		<input type="submit" value="Check" onclick="return confirm('Are you sure?');">
+	</form>
+	
+	<form name = "displayInfoForm" action = "displayInfo" method = "post">
+		<button value="Display" onclick="displayInfo()">Display Info</button>
+		<input type = "reset" value = "Reset">
+	</form>
+	<script>
+		function displayInfo(){
+			document.displayInfoForm.ACTION;
+			}
+	
+	</script>
+
+</body>
+</html>
